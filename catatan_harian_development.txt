@@ -1,0 +1,6 @@
+tanggal 27 Mei 2024
+- menambahkan file template.php pada libraries kemudian memanggilnya di file autoload.php
+- file ini berfungsi agar proses templating berjalan secara dinamis tanpa menggunakan lagi pemanggilan $this->load->view()
+- lalu saya menambahkan lagi file Supplier.php di controller, membuat view supplier/supplier_data lalu menambahkan template di dalamnya
+isinya sama dengan Dashboard
+jadi kedepannya dengan adanya file ini memudahkan saya untuk melakukan tempalting dengan konsep seperti blade di laravel
