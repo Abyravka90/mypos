@@ -1,6 +1,25 @@
+tanggal 26 mei 2024
+-menghapus index.php dari config.php hal ini dilakukan agar output base_url sama dengan site base_url
+- secara default site_url akan menghasilkan keluaran yang membawa dengan index.php dibelakang nya contohnya localhost/mypos/index.php/Dashboard
+- dengan menghapus index di config maka akan membuat index.php nya hilang
+- step berikut nya adalah menambahkan file .htaccess untuk menghilangkan index.php
+
 tanggal 27 Mei 2024
 - menambahkan file template.php pada libraries kemudian memanggilnya di file autoload.php
 - file ini berfungsi agar proses templating berjalan secara dinamis tanpa menggunakan lagi pemanggilan $this->load->view()
 - lalu saya menambahkan lagi file Supplier.php di controller, membuat view supplier/supplier_data lalu menambahkan template di dalamnya
 isinya sama dengan Dashboard
 jadi kedepannya dengan adanya file ini memudahkan saya untuk melakukan tempalting dengan konsep seperti blade di laravel
+
++dilanjutkan membuat auth
++buat dahulu form nya method nya mengarahkan ke controller auth proses yang akan memproses login nya
++buat database bernama mypos lalu buat table bernama user dengan konfigurasi yaitu terdiri dari 7 field (user_id, username, password, name, address dan level untuk level jangan lupa diberi komen)
++komen untuk level 1 adalah admin, dan level 2 adalah kasir
++di autoload libraries jangan lupa tambahkan database dan session untuk konek database builder dan juga session
++buatlah sebuah model untuk menghubungkan database nya disini bernama User_m.php pastikan nama class nya sama dan huruf besar kecilnya juga sama
++setelah membuat model langkah pertama buat querynya atau boleh juga terlebih dahulu membuat controller nya, query yang dibuat adalah query Select
+dengan mengambil where dari username dan password yang bertipe array, jangan lupa return nya adalah berupa get data nya
++buatlah controller nya disini bernama Auth, didalamnya buat dua buah function yaitu process,
++load model User_m -> cek kalau data nya ada maka eksekusi variable $_POST['login'] <- ini didapatkan dari tombol form yang sudah dibuat sebelumnya
++kalau datanya cocok maka buatlah sebuah array $params = array( 'userid' => $row->user_id) <- session dari database
++lalu gunakan perintah $this->session->set_userdata($params) <- nama session nya bisa diambil dan dimunculkan kapan saja
