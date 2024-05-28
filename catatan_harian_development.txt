@@ -23,3 +23,12 @@ dengan mengambil where dari username dan password yang bertipe array, jangan lup
 +load model User_m -> cek kalau data nya ada maka eksekusi variable $_POST['login'] <- ini didapatkan dari tombol form yang sudah dibuat sebelumnya
 +kalau datanya cocok maka buatlah sebuah array $params = array( 'userid' => $row->user_id) <- session dari database
 +lalu gunakan perintah $this->session->set_userdata($params) <- nama session nya bisa diambil dan dimunculkan kapan saja
++untuk membatasi hak akses bisa menggunakan helper dengan nama fungsi_helper membuat dua function untuk check already login dan check not login
+
+
+28 Mei 2024
+- membuat user dinamis dari session, langkah pertama
+- membuat libraries bernama fungsi.php lalu di load di dalam file autoload di bagian libraries
+- di dalam libraries fungsi dia meload model User_m dan memanggil function get untuk mendapatkan nilai dari table nya.
+- table yang diambil berupa array jadi kita harus menambahkan row() 
+-untuk menampilkan di depan kita perlu memanggil libraries nya dengan perirah $this->fungsi->username; nama username itu dari field
