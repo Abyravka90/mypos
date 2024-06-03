@@ -3,6 +3,7 @@
 class Auth extends CI_Controller {
 	public function login()
 	{
+		//pakai helper fungsi_helper
 		check_already_login();
 		$this->load->view('login');
 	}

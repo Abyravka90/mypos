@@ -120,7 +120,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href=""><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+          <a href="<?= site_url('dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
         </li>
         <li>
           <a href=""><i class="fa fa-truck"></i> <span>Supplier</span></a>
@@ -162,7 +162,7 @@
         </li>
   <?php if($this->session->userdata('level') == 1){ ?>
     <li class="header">SETTINGS</li>
-    <li><a href="#"><i class="fa fa-user"></i> <span>Users</span></a></li>
+    <li><a href="<?= site_url('user') ?>"><i class="fa fa-user"></i> <span>Users</span></a></li>
   <?php } ?>
       </ul>
     </section>

@@ -32,3 +32,13 @@ dengan mengambil where dari username dan password yang bertipe array, jangan lup
 - di dalam libraries fungsi dia meload model User_m dan memanggil function get untuk mendapatkan nilai dari table nya.
 - table yang diambil berupa array jadi kita harus menambahkan row() 
 -untuk menampilkan di depan kita perlu memanggil libraries nya dengan perirah $this->fungsi->username; nama username itu dari field
+
+29 Mei 2024
+-membuat view user_form_add lalu membuat form didalamnya
+-menambahkan form validation pada controller user address
+-aturan form validation baru dengan CI 3
+
+03 Juni 2024
+-menyelesaikan user form pada table user
+-lebih banyak eksplorasi pada form validation di controller user nya
+-menambahkan constructor pada setiap controller terutama User
